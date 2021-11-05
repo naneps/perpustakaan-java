@@ -1,5 +1,4 @@
 import java.util.*;
-
 import models.MainMenu;
 public class Main {
     public static void main(String[] args) {
@@ -15,6 +14,6 @@ public class Main {
             } else {
                 System.out.println("exitttt");
             }
-                
+            
     }
 }

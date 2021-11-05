@@ -6,7 +6,7 @@ public class Kategori {
         this.kategori = kategori;
     }
 
-    private String getKategori() {
+    public String getKategori() {
         return this.kategori;
     }
 }
