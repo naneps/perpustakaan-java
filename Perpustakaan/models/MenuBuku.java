@@ -3,6 +3,8 @@ package models;
 import java.lang.Runtime;
 import services.ServiceBuku;
 import java.util.*;
+
+import interfaces.Menu;
 public class MenuBuku  implements Menu{
     static Scanner scr = new Scanner(System.in);
     static ServiceBuku servBuku = new ServiceBuku();
@@ -24,7 +26,7 @@ public class MenuBuku  implements Menu{
                 System.out.print("\033[H\033[2J");
                 System.out.flush();
                 System.out.println("==== Daftar Buku ====");
-                servBuku.showBuku();
+                servBuku.showBuku();    
                 break;
             case 2:
 
