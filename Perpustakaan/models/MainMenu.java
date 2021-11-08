@@ -14,6 +14,7 @@ public class MainMenu {
         System.out.println("==================");
         System.out.print("Pilih Menu [1-4] : ");
         pilihan = scr.nextInt();
+            System.out.flush();
             switch (pilihan) {
             case 1:
             System.out.print("\033[H\033[2J");
@@ -21,9 +22,13 @@ public class MainMenu {
             menuBuku.showMenu();
             break;
         case 2:
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
             System.out.println("Peminjaman");
             break;
         case 3:
+          System.out.print("\033[H\033[2J");
+            System.out.flush();
             System.out.println("Pengembalian");
             break;
         default:

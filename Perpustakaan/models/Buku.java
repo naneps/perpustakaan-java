@@ -3,9 +3,9 @@ public class Buku {
     private String judul;
     private String penulis;
     private String kode = "KB";
-    static int nmr = 1;
-    private int id = 0;
-    static int nm = 1;
+    static Integer nmr = 1;
+    private Integer id = 0;
+    static Integer nm = 1;
     private Kategori kategori;
     public void setJudul(String judul) {
         this.judul = judul;
@@ -26,11 +26,11 @@ public class Buku {
         return this.judul;
     }
 
-    public void setpenulis(String penulis) {
+    public void setPenulis(String penulis) {
         this.penulis = penulis;
     }
 
-    public String getpenulis() {
+    public String getPenulis() {
         return this.penulis;
     }
 
@@ -51,7 +51,7 @@ public class Buku {
         return this.kategori;
     }
 
-    public int getId() {
+    public Integer getId() {
         return this.id;
     }
 

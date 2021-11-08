@@ -1,6 +1,5 @@
 package models;
-
-import java.lang.Runtime;
+import services.Tools;
 import services.ServiceBuku;
 import java.util.*;
 
@@ -23,15 +22,14 @@ public class MenuBuku  implements Menu{
         pilihan = scr.nextInt();
             switch (pilihan) {
             case 1:
-                System.out.print("\033[H\033[2J");
-                System.out.flush();
+            
+                Tools.clearScreen();
                 System.out.println("==== Daftar Buku ====");
-                servBuku.showBuku();    
+                servBuku.showBuku();
+                Tools.backToMenu();
                 break;
             case 2:
-
-                System.out.print("\033[H\033[2J");
-                System.out.flush();
+                Tools.clearScreen();
                 System.out.println("==== Tambah Buku ====");
                 System.out.print("Jumlah Buku : ");
                 jml = scr.nextInt();
@@ -45,9 +43,13 @@ public class MenuBuku  implements Menu{
                 }
                 break;
             case 3:
-                System.out.print("\033[H\033[2J");
-                System.out.flush();
+                Tools.clearScreen();
                 System.out.println("==== Hapus Buku ====");
+                servBuku.showBuku();
+                System.out.print("Masukan iD Buku :");
+                String kd = scr.next();
+                servBuku.deleteDataBuuk(kd);
+                servBuku.showBuku();
                 break;
             case 4:
                 System.out.print("\033[H\033[2J");
